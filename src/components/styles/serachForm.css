@@ -1,0 +1,11 @@
+.serachForm {
+}
+.serachForm form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.serachForm form input {
+  margin: 5px;
+  padding: 5px;
+}
