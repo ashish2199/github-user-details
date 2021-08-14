@@ -16,9 +16,9 @@ Things I have used :
 
 ## Screenshots
 
-![User search](https://imgur.com/FYDotje)
+![User search](https://i.imgur.com/FYDotje.png)
 
-![History page](https://imgur.com/W1kqWKP)
+![History page](https://i.imgur.com/W1kqWKP.png)
 
 ### To run project
 
