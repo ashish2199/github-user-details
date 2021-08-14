@@ -1,0 +1,10 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: burlywood;
+  padding: 5px;
+}
+nav div {
+  padding: 5px;
+  border: 1px solid black;
+}

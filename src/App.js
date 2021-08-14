@@ -1,5 +1,5 @@
+import { AppContainer } from "./components/AppContainer.jsx";
 import "./App.css";
-import { SearchContainer } from "./components/SearchContainer.jsx";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
         <h1>Gthub Username searcher</h1>
       </div>
       <div style={{ height: "95%" }}>
-        <SearchContainer />
+        <AppContainer />
       </div>
     </div>
   );

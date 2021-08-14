@@ -26,8 +26,8 @@ function UserInfo(props){
     let userRepos = (
         <div className="userRepos">
         {
-            Array.isArray(repos) && repos.map((r) => 
-                <div className="userRepo">
+            Array.isArray(repos) && repos.map((r,i) => 
+                <div className="userRepo" key={i}>
                     <div className="repoTitle">
                         <div style={{width: '60%', textAlign: 'left'}}>
                         <a href={r.html_url}>{r.name}</a>

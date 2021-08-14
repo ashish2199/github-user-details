@@ -1,22 +1,37 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {getUserApiUrl, getUserReposApiUrl} from '../ApiEndpoints'
 import {UserInfo} from './UserInfo'
 import './styles/serachForm.css'
 
-const SearchContainer = function ({fetchUserDetails}) {
-  const [userName, setUserName] = useState('');
+const SearchContainer = function ({addToHistory, searchString}) {
+  
+  const [userName, setUserName] = useState(searchString||'');
   const [userJson, setUserJson] = useState('');
+  
+  useEffect(() => {
+    fetchUserData(userName);
+  }, []);
+
   function onSubmit (evt) {
     evt.preventDefault();
+    fetchUserData(userName);
+  }
+  
+  function fetchUserData(userName){
+    if(!userName){
+      return;
+    }
     let userDetailsUrl = getUserApiUrl(userName);
     let userReposUrl = getUserReposApiUrl(userName);
-    Promise.all([fetchUserData(userDetailsUrl), fetchUserData(userReposUrl)]).then((values) => {
+    Promise.all([fetchData(userDetailsUrl), fetchData(userReposUrl)]).then((values) => {
       let [userDetails, repos] = values;
       let userData = {userDetails, repos};
       console.log(userData);
       setUserJson(userData)
+      addToHistory(userName);
     });
   }
+
   function onUsernameChange(evt) {
     let value = evt.target.value;
     if(!value){
@@ -24,8 +39,7 @@ const SearchContainer = function ({fetchUserDetails}) {
     }
     setUserName(value)
   }
-  async function fetchUserData (url) {
-    
+  async function fetchData (url) {
     let response = await fetch(url);
     let responseOutput = await response.json();
     return responseOutput;
@@ -41,11 +55,11 @@ const SearchContainer = function ({fetchUserDetails}) {
             <label>Enter username</label>
             <input type="text" value={userName} onChange={onUsernameChange}/>
             <input type="submit" onClick={onSubmit}/>
-          </form>
+          </form>                 
         </div>
-      </div>
-      <div style={{height: "90%"}}>
-        {(userJson && userName) && <UserInfo user={userJson}/>}          
+      </div>  
+      <div>  
+        {(userJson && userName) && <UserInfo user={userJson}/>}
       </div>
     </>
   );

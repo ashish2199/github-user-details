@@ -1,0 +1,14 @@
+.searchHistory {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.record {
+  display: flex;
+  flex-direction: row;
+}
+.recordsContent {
+  width: 180px;
+  padding: 10px;
+}
