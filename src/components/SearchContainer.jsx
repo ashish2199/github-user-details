@@ -11,7 +11,8 @@ const SearchContainer = function ({fetchUserDetails}) {
     let userDetailsUrl = getUserApiUrl(userName);
     let userReposUrl = getUserReposApiUrl(userName);
     Promise.all([fetchUserData(userDetailsUrl), fetchUserData(userReposUrl)]).then((values) => {
-      let userData = {userDetails: values[0], repos:values[1]};
+      let [userDetails, repos] = values;
+      let userData = {userDetails, repos};
       console.log(userData);
       setUserJson(userData)
     });
@@ -31,15 +32,21 @@ const SearchContainer = function ({fetchUserDetails}) {
   }
   return (
     <>
-      <h2>Search</h2>
-      <div className="serachForm">
-        <form>
-          <label>Enter username</label>
-          <input type="text" value={userName} onChange={onUsernameChange}/>
-          <input type="submit" onClick={onSubmit}/>
-        </form>
+      <div style={{height: "5%"}}>
+        <h2>Search</h2>  
       </div>
-      {(userJson && userName) && <UserInfo user={userJson}/>}  
+      <div style={{height: "5%"}}>
+        <div className="serachForm">
+          <form>
+            <label>Enter username</label>
+            <input type="text" value={userName} onChange={onUsernameChange}/>
+            <input type="submit" onClick={onSubmit}/>
+          </form>
+        </div>
+      </div>
+      <div style={{height: "90%"}}>
+        {(userJson && userName) && <UserInfo user={userJson}/>}          
+      </div>
     </>
   );
 };

@@ -1,8 +1,8 @@
 import './styles/UserInfo.css'
 
 function UserInfo(props){
-    let user = props.user.userDetails || {};
-    let repos = props.user.repos || [];
+    let user = props.user.userDetails;
+    let repos = props.user.repos;
     let noUserFound = (<h2>No such username exists</h2>)
     let userData = (
             <div className="userDetails">
@@ -26,7 +26,7 @@ function UserInfo(props){
     let userRepos = (
         <div className="userRepos">
         {
-            repos.map((r) => 
+            Array.isArray(repos) && repos.map((r) => 
                 <div className="userRepo">
                     <div className="repoTitle">
                         <div style={{width: '60%', textAlign: 'left'}}>
@@ -53,9 +53,7 @@ function UserInfo(props){
     )
     return (
         <>
-            <div className="detailsContainer">
-            {user.message === 'Not Found' ? noUserFound : userDetails}
-            </div>     
+        {user.message === 'Not Found' ? noUserFound : userDetails}
         </>
     )
 }
