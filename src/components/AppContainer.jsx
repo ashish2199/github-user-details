@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Switch, Route, Link, useLocation, useHistory } from 'react-router-dom'
+import { Switch, Route, Link, useLocation, useHistory, Redirect } from 'react-router-dom'
 import { SearchContainer } from "./SearchContainer.jsx";
 import { HistoryContainer } from "./HistoryContainer.jsx";
 
@@ -23,23 +23,25 @@ const AppContainer = function () {
 
     return (
       <>
-        <header className="App-header">
+        <header>
           <nav>
               <div><Link to='/search'>Search</Link></div>
               <div><Link to='/History'>History</Link></div>
           </nav>
         </header>
-        <Switch>
-          <Route exact path='/'>
-              <SearchContainer addToHistory={addSearch} />
-          </Route>
-          <Route path='/search' >
-            <SearchContainer searchString={query.get("q")} addToHistory={addSearch} />
-          </Route>
-          <Route path='/history'>
-            <HistoryContainer searchHistory={searchHistory} />
-          </Route>
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path='/'>
+                <Redirect to='/search' />
+            </Route>
+            <Route path='/search' >
+              <SearchContainer searchString={query.get("q")} addToHistory={addSearch} />
+            </Route>
+            <Route path='/history'>
+              <HistoryContainer searchHistory={searchHistory} />
+            </Route>
+          </Switch>
+        </main>
       </>
     );
   };

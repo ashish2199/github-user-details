@@ -3,13 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 .userData {
   display: flex;
   border: 1px solid black;
   width: 99%;
   margin: 0 auto;
-  height: 750px;
+  height: 99%;
 }
 .userDetails {
   display: flex;

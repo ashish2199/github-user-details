@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import {getUserApiUrl, getUserReposApiUrl} from '../ApiEndpoints'
 import {UserInfo} from './UserInfo'
-import './styles/serachForm.css'
+import './styles/SearchContainer.css'
 
 const SearchContainer = function ({addToHistory, searchString}) {
   
@@ -46,8 +46,8 @@ const SearchContainer = function ({addToHistory, searchString}) {
   }
   return (
     <>
-      <div style={{height: "5%"}}>
-        <h2>Search</h2>  
+      <div className="header">
+        Search
       </div>
       <div style={{height: "5%"}}>
         <div className="serachForm">
@@ -58,7 +58,7 @@ const SearchContainer = function ({addToHistory, searchString}) {
           </form>                 
         </div>
       </div>  
-      <div>  
+      <div style={{height: "90%"}}>  
         {(userJson && userName) && <UserInfo user={userJson}/>}
       </div>
     </>

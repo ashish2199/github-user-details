@@ -1,8 +1,14 @@
+.header {
+  height: 5%;
+  font-size: 25px;
+  padding: 5px;
+}
 .searchHistory {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 .record {
   display: flex;

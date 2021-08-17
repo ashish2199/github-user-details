@@ -4,8 +4,8 @@ import "./styles/HistoryContainer.css"
 const HistoryContainer = function ({searchHistory}) {
   return (
     <>
-      <div style={{height: "5%"}}>
-        <h2>History Page</h2>  
+      <div className="header">
+        History Page  
       </div>
       <div className="searchHistory" style={{height: "95%"}}>
         {
