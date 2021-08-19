@@ -30,15 +30,15 @@ function UserInfo(props){
                 <div className="userRepo" key={i}>
                     <div className="repoTitle">
                         <div style={{width: '60%', textAlign: 'left'}}>
-                        <a href={r.html_url}>{r.name}</a>
+                            <a href={r.html_url}> {r.name} </a>
                         </div>
                         <div className="repoStat">
-                            <div>Language:{r.language}  </div>
+                            <div>Language: {r.language} </div>
                             <div>Stars: {r.stargazers_count} </div>
                         </div>
                     </div>
                     <div className="repoDescription">
-                    {r.description}
+                        {r.description}
                     </div>
                 </div>
             )

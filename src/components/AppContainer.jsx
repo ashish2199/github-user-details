@@ -23,13 +23,11 @@ const AppContainer = function () {
 
     return (
       <>
-        <header>
-          <nav>
-              <div><Link to='/search'>Search</Link></div>
-              <div><Link to='/History'>History</Link></div>
-          </nav>
-        </header>
-        <main>
+        <nav className="NavBar">
+            <div><Link to='/search'>Search</Link></div>
+            <div><Link to='/History'>History</Link></div>
+        </nav>
+        <main className="MainContent">
           <Switch>
             <Route exact path='/'>
                 <Redirect to='/search' />

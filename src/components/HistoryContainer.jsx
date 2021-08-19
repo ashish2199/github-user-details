@@ -4,10 +4,10 @@ import "./styles/HistoryContainer.css"
 const HistoryContainer = function ({searchHistory}) {
   return (
     <>
-      <div className="header">
+      <div className="pageTitle">
         History Page  
       </div>
-      <div className="searchHistory" style={{height: "95%"}}>
+      <div className="searchHistory">
         {
           searchHistory.map((record,i) =>
             <div className="record" key={i}>

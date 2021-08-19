@@ -39,26 +39,26 @@ const SearchContainer = function ({addToHistory, searchString}) {
     }
     setUserName(value)
   }
+
   async function fetchData (url) {
     let response = await fetch(url);
     let responseOutput = await response.json();
     return responseOutput;
   }
+  
   return (
     <>
-      <div className="header">
+      <div className="pageTitle">
         Search
       </div>
-      <div style={{height: "5%"}}>
-        <div className="serachForm">
+      <div className="serachForm">
           <form>
             <label>Enter username</label>
             <input type="text" value={userName} onChange={onUsernameChange}/>
             <input type="submit" onClick={onSubmit}/>
           </form>                 
-        </div>
-      </div>  
-      <div style={{height: "90%"}}>  
+      </div>
+      <div className="userInfoContainer">  
         {(userJson && userName) && <UserInfo user={userJson}/>}
       </div>
     </>

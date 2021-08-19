@@ -3,11 +3,9 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App" style={{ height: "100%" }}>
-      <div style={{ height: "5%", fontSize: "35px", padding: "5px" }}>
-        Gthub Username searcher
-      </div>
-      <div style={{ height: "95%" }}>
+    <div className="App">
+      <header className="AppName">Gthub Username searcher</header>
+      <div className="AppContent">
         <AppContainer />
       </div>
     </div>
