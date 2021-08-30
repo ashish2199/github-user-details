@@ -1,4 +1,6 @@
-# Github username searcher
+# [Github username searcher](https://ashish2199.github.io/github-user-details/)
+
+## [Live Demo](https://ashish2199.github.io/github-user-details/)
 
 My React Implementation of [Chama froentend assignment](https://github.com/chamatheapp/chama-frontend-assignment)
 
