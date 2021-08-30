@@ -12,7 +12,7 @@
   margin: 0 auto;
   height: 99%;
 }
-.userDetails {
+.userDetailsContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,10 +22,24 @@
   width: 40%;
   border-right: 1px solid black;
 }
-.userDetails img {
+.profileName {
+  font-size: 25px;
+  height: 5%;
+}
+.profileDetails {
+  height: 65%;
+  overflow: auto;
+}
+.profilePic {
+  height: 30%;
+  overflow: hidden;
+}
+.profilePic img {
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 50%;
 }
-.userRepos {
+.userReposContainer {
   display: flex;
   flex-direction: column;
   width: 60%;
