@@ -1,6 +1,6 @@
 .pageTitle {
   height: 5%;
-  font-size: 25px;
+  font-size: large;
   padding: 5px;
 }
 .searchHistory {
@@ -15,6 +15,5 @@
   flex-direction: row;
 }
 .recordsContent {
-  width: 180px;
   padding: 10px;
 }

@@ -17,13 +17,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 450px;
   text-align: left;
   width: 40%;
   border-right: 1px solid black;
 }
 .profileName {
-  font-size: 25px;
+  font-size: large;
   height: 5%;
 }
 .profileDetails {
