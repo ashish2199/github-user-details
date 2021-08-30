@@ -67,6 +67,10 @@
   text-align: left;
   padding-top: 10px;
 }
+.repoName {
+  width: "60%";
+  textalign: "left";
+}
 dl {
   padding-left: 20px;
 }
@@ -98,5 +102,18 @@ dd {
   .userReposContainer {
     width: 100%;
     height: 100vh;
+  }
+  .repoStat {
+    width: 100%;
+  }
+  .repoTitle {
+    flex-direction: column;
+  }
+  .repoName {
+    width: 100%;
+    text-align: left;
+  }
+  .profileName {
+    position: sticky;
   }
 }

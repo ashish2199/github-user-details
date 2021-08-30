@@ -8,7 +8,7 @@ function UserRepos({ repos }) {
         repos.map((r, i) => (
           <div className="userRepo" key={i}>
             <div className="repoTitle">
-              <div style={{ width: "60%", textAlign: "left" }}>
+              <div className="repoName">
                 <a href={r.html_url}> {r.name} </a>
               </div>
               <div className="repoStat">
