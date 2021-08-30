@@ -4,7 +4,7 @@
   padding: 5px;
 }
 .serachForm {
-  height: 5%;
+  height: 10%;
 }
 .serachForm form {
   display: flex;
@@ -16,5 +16,5 @@
   padding: 5px;
 }
 .userInfoContainer {
-  height: 90%;
+  height: 85%;
 }

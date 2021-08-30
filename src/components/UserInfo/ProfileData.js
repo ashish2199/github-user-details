@@ -5,7 +5,7 @@ function ProfileData({ user }) {
   return (
     <div className="userDetailsContainer">
       <div className="profilePic">
-        <img width="200px" src={user.avatar_url} alt="Gihub user's profile" />
+        <img src={user.avatar_url} alt="Gihub user's profile" />
       </div>
       <div className="profileName">
         Details : <a href={user.html_url}>{user.login}</a>
